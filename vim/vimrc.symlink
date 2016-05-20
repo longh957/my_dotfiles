@@ -63,7 +63,7 @@ call plug#end()
 """""""""""""""
 syntax on "Syntax highlighting
 set background=dark
-colorscheme gruvbox "Colorscheme to pick
+colorscheme smyck "Colorscheme to pick
 
 set gfn=Menlo\ for\ Powerline:h14 "Font settings for OSX
 "Set font for Windows
