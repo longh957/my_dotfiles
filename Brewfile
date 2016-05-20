@@ -1,6 +1,5 @@
 tap 'caskroom/cask'
 tap 'homebrew/bundle'
-tap 'nviennot/tmate'
 tap 'universal-ctags/universal-ctags'
 brew 'autoconf'
 brew 'xz'
@@ -39,8 +38,8 @@ brew 'neovim/neovim/neovim'
 brew 'wget'
 brew 'zsh'
 brew 'caskroom/cask/brew-cask'
-brew 'nviennot/tmate/tmate'
-brew 'universal-ctags/universal-ctags/universal-ctags', args: ['HEAD']
+brew 'tmate'
+brew install --HEAD universal-ctags
 brew 'ffmpeg'
 brew 'youtube-dl'
 cask 'filebot'
