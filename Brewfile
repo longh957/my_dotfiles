@@ -39,7 +39,7 @@ brew 'wget'
 brew 'zsh'
 brew 'caskroom/cask/brew-cask'
 brew 'tmate'
-brew install --HEAD universal-ctags
+brew '--HEAD universal-ctags'
 brew 'ffmpeg'
 brew 'youtube-dl'
 cask 'filebot'
