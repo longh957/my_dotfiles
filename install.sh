@@ -6,9 +6,13 @@ chsh -s $(which zsh)
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 
 mkdir -p ~/.vim/autoload
+mkdir -p ~/.vim/colors
 mkdir -p ~/.config/nvim/autoload
 mkdir -p ~/.tmux/plugins
 mkdir -p ~/dev/.virtualenv
+
+# Download Smyck theme
+git clone https://github.com/longh957/Smyck-Color-Scheme.git ~/.vim/colors
 
 # Create Symlinks
 ln -s $PWD/zsh/zshrc.symlink ~/.zshrc
