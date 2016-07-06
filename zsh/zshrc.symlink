@@ -77,6 +77,7 @@ unalias gls #git log conflicts with dircolors gls
 # Load other program settings
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
+[[ -f ~/.ng-completions ]] && source ~/.ng-completions
 
 # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local

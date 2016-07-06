@@ -5,6 +5,7 @@ let g:syntastic_haml_checkers=['haml-lint'] "HAML
 let g:syntastic_json_checkers=['jsonlint'] "JSON
 let g:syntastic_javascript_checkers=['eslint'] "ES6
 let g:syntastic_slim_checkers=['slimrb'] "Slim Template
+let g:syntastic_typescript_cheker=['tsc', 'tslint'] "TypeScript
 let g:syntastic_aggregate_errors = 1
 
 set statusline+=%#warningmsg#
