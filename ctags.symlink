@@ -9,6 +9,6 @@
 --exclude=bower_components
 --exclude=public/assets
 --exclude=vendor
---languages=go,html,javascript,json,python,ruby
+--languages=html,javascript,python,ruby
 --extra=+
 --append
