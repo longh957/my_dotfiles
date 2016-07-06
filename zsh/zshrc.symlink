@@ -35,7 +35,6 @@ setopt beep nomatch notify
 
 # Vim Bindings
 bindkey -v
-zstyle :compinstall filename '/Users/aseng/.zshrc'
 
 # load our own completion functions
 fpath=(~/.zsh/completion /usr/local/share/zsh/site-functions $fpath)
@@ -77,6 +76,10 @@ unalias gls #git log conflicts with dircolors gls
 # Load other program settings
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
+[[ -f ~/.ng-completions ]] && source ~/.ng-completions
 
 # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+
+export NVM_DIR="/Users/lhuynh/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

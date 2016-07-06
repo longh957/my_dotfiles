@@ -6,9 +6,13 @@ chsh -s $(which zsh)
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 
 mkdir -p ~/.vim/autoload
+mkdir -p ~/.vim/colors
 mkdir -p ~/.config/nvim/autoload
 mkdir -p ~/.tmux/plugins
 mkdir -p ~/dev/.virtualenv
+
+# Download Smyck theme
+git clone https://github.com/longh957/Smyck-Color-Scheme.git ~/.vim/colors
 
 # Create Symlinks
 ln -s $PWD/zsh/zshrc.symlink ~/.zshrc
@@ -38,6 +42,8 @@ ln -s $PWD/elixir/iex.exs.symlink ~/.iex.exs
 ln -s $PWD/tmux/.tmux.conf ~/
 ln -s $PWD/tmux/plugins/tpm ~/.tmux/plugins/tpm
 
+ln -s $PWD/tslint/tslint.json ~/tslint.json
+ln -s $PWD/ng/.ng-completions ~/.ng-completions
 
 ln -s $PWD/git/gitconfig.symlink ~/.gitconfig
 ln -s $PWD/git/gitignore_global.symlink ~/.gitignore_global
@@ -76,4 +82,5 @@ npm install -g avn avn-nvm avn-n
 nvm alias default node
 npm install -g tern js-beautify jshint
 npm install -g eslint babel-eslint eslint-plugin-react
+npm install -g tslint typescript
 
