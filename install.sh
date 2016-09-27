@@ -42,6 +42,8 @@ ln -s $PWD/elixir/iex.exs.symlink ~/.iex.exs
 ln -s $PWD/tmux/.tmux.conf ~/
 ln -s $PWD/tmux/plugins/tpm ~/.tmux/plugins/tpm
 
+ln -s $PWD/tslint/tslint.json ~/tslint.json
+ln -s $PWD/ng/.ng-completions ~/.ng-completions
 
 ln -s $PWD/git/gitconfig.symlink ~/.gitconfig
 ln -s $PWD/git/gitignore_global.symlink ~/.gitignore_global
@@ -80,4 +82,5 @@ npm install -g avn avn-nvm avn-n
 nvm alias default node
 npm install -g tern js-beautify jshint
 npm install -g eslint babel-eslint eslint-plugin-react
+npm install -g tslint typescript
 

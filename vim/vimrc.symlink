@@ -56,6 +56,9 @@ Plug 'unblevable/quick-scope'
 Plug 'ervandew/supertab'
 Plug 'tomtom/tcomment_vim'
 Plug 'wincent/terminus'
+" Angular 2
+Plug 'magarcia/vim-angular2-snippets'
+Plug 'leafgarland/typescript-vim'
 
 call plug#end()
 """""""""""""""

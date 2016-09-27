@@ -78,6 +78,7 @@ export DISABLE_SPRING=1
 # Load other program settings
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
+[[ -f ~/.ng-completions ]] && source ~/.ng-completions
 
 # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
