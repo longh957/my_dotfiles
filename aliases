@@ -50,7 +50,7 @@ alias logout='sudo pkill -u $USER'
 alias log-out='sudo pkill -u $USER'
 
 #RubyMine
-alias rubmine='open -a rubymine .'
+alias mine='open -a rubymine .'
 
 # http://www.gnu.org/software/emacs/manual/html_node/emacs/Emacs-Server.html#Emacs-Server
 # alias emacsnw='emacs -nw'
@@ -80,3 +80,6 @@ alias vom='vim'
 # alias gst='git status'
 # alias gco='git checkout'
 # alias gcob='git checkout -b'
+#
+# Playboy
+alias pcm='PlayboyContentfulModels::'

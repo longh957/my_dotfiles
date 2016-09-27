@@ -3,7 +3,7 @@ let g:syntastic_ruby_checkers=['rubocop'] "Ruby
 let g:syntastic_scss_checkers=['scss_lint'] "SASS CSS
 let g:syntastic_haml_checkers=['haml-lint'] "HAML
 let g:syntastic_json_checkers=['jsonlint'] "JSON
-let g:syntastic_javascript_checkers=['eslint'] "ES6
+let g:syntastic_javascript_checkers=['eslint', 'jslint', 'jshint'] "ES6
 let g:syntastic_slim_checkers=['slimrb'] "Slim Template
 let g:syntastic_aggregate_errors = 1
 

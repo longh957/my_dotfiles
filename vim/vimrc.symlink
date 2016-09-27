@@ -130,7 +130,7 @@ set colorcolumn=80 "Mark colum 80
 
 " Support for es6
 autocmd BufRead,BufNewFile *.es6 setfiletype javascript
-let g:jsx_ext_required = 0 " Allow JSX in normal JS files
+let g:jsx_ext_required = 1 " Allow JSX in normal JS files
 
 "List of files to ignore
 source ~/.vim/ignore.vim
@@ -181,6 +181,9 @@ set autoread "Automatically reload files on changes
 
 set timeoutlen=250 "Time to wait after ESC (default causes an annoying delay)
 set history=256
+
+" EJS
+au BufNewFile,BufRead *.ejs set filetype=html
 
 "Ctags options
 set tags+=gems.tags
