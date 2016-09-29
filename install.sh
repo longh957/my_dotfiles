@@ -53,6 +53,10 @@ ln -s $PWD/thymerc.symlink ~/.thymerc
 
 git config --global core.excludesfile
 
+#vim plug for neovim
+#curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
+#    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
 # Homebrew install
 ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 brew update
