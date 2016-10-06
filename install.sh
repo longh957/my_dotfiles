@@ -28,7 +28,7 @@ ln -s $PWD/vim/functions ~/.vim/functions
 ln -s $PWD/vim/plugins ~/.vim/plugins
 ln -s $PWD/vim/vimrc.symlink ~/.vimrc
 ln -s $PWD/vim/ignore.vim.symlink ~/.vim/ignore.vim
-ln -s $PWD/vim/vimrc.symlink ~/.config/nvim/init.vim
+ln -s $PWD/nvim/init.symlink ~/.config/nvim/init.vim
 ln -s $PWD/spacemacs/spacemacs.symlink ~/.spacemacs
 
 ln -s $PWD/rails/.gemrc ~/
