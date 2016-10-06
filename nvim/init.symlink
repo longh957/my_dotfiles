@@ -1,6 +1,17 @@
 """""""""""
 "NVIM PLUG"
 """""""""""
+
+" brew install python3
+" pip2 install neovim
+" pip3 install neovim
+" install rbenv ctags
+" mkdir -p ~/.rbenv/plugins
+" git clone git://github.com/tpope/rbenv-ctags.git \
+"   ~/.rbenv/plugins/rbenv-ctags
+" rbenv ctags
+"gem install gem-ctags
+" gem ctags
 " Automatic install of vim-plug
 if empty(glob('~/.config/nvim/plugged'))
   silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
@@ -304,11 +315,11 @@ let g:neomake_error_sign = {
 autocmd BufWritePost *.js Neomake eslint
 " gem install rubocop
 autocmd BufWritePost *.rb Neomake rubocop
-" apt-get install tidy
+" apt-get install tidy or brew install tidy-html5
 autocmd BufWritePost *.html Neomake tidy
-" gem install scsslint
+" gem install scss_lint
 autocmd BufWritePost *.scss Neomake scsslint
-" apt-get install shellcheck
+" apt-get install shellcheck or brew install shellcheck
 autocmd BufWritePost *.sh Neomake shellcheck
 " pip3 install vim-vint
 autocmd BufWritePost *.vim Neomake vint
