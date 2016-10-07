@@ -265,24 +265,58 @@ let g:lightline = {
       \ },
       \ 'component': {
       \   'readonly': '%{&filetype=="help"?"":&readonly?"R":""}',
-      \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
-      \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
+      \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}'
       \ },
       \ 'component_function': {
-      \   'filename': 'LightLineFilename'
+      \   'filename': 'LightLineFilename',
+      \   'fugitive': 'LightLineFugitive'
       \ },
       \ 'component_visible_condition': {
       \   'readonly': '(&filetype!="help"&& &readonly)',
       \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
       \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
       \ },
-      \ 'subseparator': { 'left': '│', 'right': '│' }
+      \ 'separator': { 'left': '', 'right': '' },
+      \ 'subseparator': { 'left': '▶', 'right': '◀' }
       \ }
 
-function! LightLineFilename()
-  return expand('%:p')
+function! LightLineModified()
+  if &filetype == "help"
+    return ""
+  elseif &modified
+    return "+"
+  elseif &modifiable
+    return ""
+  else
+    return ""
+  endif
 endfunction
 
+function! LightLineReadonly()
+  if &filetype == "help"
+    return ""
+  elseif &readonly
+    return "🔒"
+  else
+    return ""
+  endif
+endfunction
+
+function! LightLineFilename()
+"  return expand('%:p')
+  return ('' != LightLineReadonly() ? LightLineReadonly() . ' ' : '') .
+       \ ('' != expand('%:t') ? expand('%:t') : '[No Name]') .
+       \ ('' != LightLineModified() ? ' ' . LightLineModified() : '')
+endfunction
+
+function! LightLineFugitive()
+  if exists("*fugitive#head")
+    let branch = fugitive#head()
+    return branch !=# '' ? '⎇  ' .branch : ''
+  endif
+  return ''
+endfunction
+"\   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
 " -----------------------------------------------------
 " 4.9 Neomake settings
 " -----------------------------------------------------
