@@ -94,6 +94,9 @@ Plug 'gorodinskiy/vim-coloresque', { 'for': ['css', 'sass', 'scss', 'less'] }
 " " Lightline (simple status line)
 Plug 'itchyny/lightline.vim'
 
+"atags
+Plug 'fntlnz/atags.vim'
+
 call plug#end()
 """""""""""""""
 "LOOK AND FEEL"
@@ -163,7 +166,7 @@ set softtabstop=2 "Make backspace go back 4 spaces
 "autocmd FileType * set tabstop=2|set shiftwidth=2|set noexpandtab
 autocmd FileType python set tabstop=4|set shiftwidth=4|set expandtab
 
-set colorcolumn=80 "Mark colum 80
+set colorcolumn=100 "Mark colum 80
 
 " Support for es6
 autocmd BufRead,BufNewFile *.es6 setfiletype javascript
@@ -205,7 +208,25 @@ nmap ga <Plug>(EasyAlign)
 silent! call repeat#set("\<Plug>MyWonderfulMap", v:count)
 
 " Index ctags from any project, including those outside Rails
-map <Leader>ct :!ctags -R .<CR>
+map <Leader>ct :!ctags -R --exclude=*.min.js --exclude=wforms.js . <CR>
+
+
+"ATags
+" let g:atags_build_commands_list = [
+"     \"ctags -R -f tags.tmp",
+"     \"awk 'length($0) < 400' tags.tmp > tags",
+"     \"rm tags.tmp"
+"     \]
+
+let g:atags_build_commands_list = [
+    \ 'ag -g "" | ctags -L - --fields=+l -f tags.tmp',
+    \ 'awk "length($0) < 400" tags.tmp > tags',
+    \ 'rm tags.tmp'
+    \ ]
+
+map <Leader>at :call atags#generate()<cr>
+" autocmd BufWritePost * call atags#generate()
+
 """""""""""""""""""
 "Misc Options
 """""""""""""""""""
@@ -223,7 +244,7 @@ set history=256
 au BufNewFile,BufRead *.ejs set filetype=html
 
 "Ctags options
-set tags+=gems.tags
+set tags+=gems.tags,./tags,tags
 
 set diffopt+=vertical "Fugitive option to open diffs in vertical split
 set diffopt+=iwhite " Ignore whitespace when using vimdiff

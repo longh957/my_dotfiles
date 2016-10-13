@@ -65,6 +65,9 @@ bindkey "^Y" accept-and-hold
 bindkey "^N" insert-last-word
 bindkey -s "^T" "^[Isudo ^[A" # "t" for "toughguy"
 
+# infocmp $TERM | sed 's/kbs=^[hH]/kbs=\\177/' > $TERM.ti
+# tic $TERM.ti
+
 # Configure online help
 unalias run-help
 autoload run-help
