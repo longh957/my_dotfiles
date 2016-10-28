@@ -47,7 +47,7 @@ Plug 'elzr/vim-json'
 Plug 'mustache/vim-mustache-handlebars'
 " Plug 'tpope/vim-rails'
 " Plug 'vim-ruby/vim-ruby'
-" Plug 'slim-template/vim-slim'
+Plug 'slim-template/vim-slim'
 " Plug 'tpope/vim-bundler'
 " Elixir Plugins
 Plug 'elixir-lang/vim-elixir'
@@ -361,7 +361,7 @@ let g:neomake_error_sign = {
       \ 'text': '❌',
       \ 'texthl': 'ErrorMsg',
       \ }
-
+autocmd BufNewFile,BufRead *.slim setlocal filetype=slim
 " -----------------------------------------------------
 " 7.1 Run linters after save
 " -----------------------------------------------------
@@ -378,6 +378,8 @@ autocmd BufWritePost *.scss Neomake scsslint
 autocmd BufWritePost *.sh Neomake shellcheck
 " pip3 install vim-vint
 autocmd BufWritePost *.vim Neomake vint
+"gem  install slim_lint
+" autocmd BufWritePost *.slim Neomake slim-lint
 "}}}
 "
 "" Command-line config{{{
