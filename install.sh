@@ -10,6 +10,7 @@ mkdir -p ~/.vim/colors
 mkdir -p ~/.config/nvim/autoload
 mkdir -p ~/.tmux/plugins
 mkdir -p ~/dev/.virtualenv
+mkdir -p ~/.spacemacs.d
 
 # Download Smyck theme
 git clone https://github.com/longh957/Smyck-Color-Scheme.git ~/.vim/colors
@@ -31,7 +32,8 @@ ln -s $PWD/vim/ignore.vim.symlink ~/.vim/ignore.vim
 ln -s $PWD/nvim/init.symlink ~/.config/nvim/init.vim
 ln -s $PWD/nvim/plugins ~/.config/nvim/plugins
 ln -s $PWD/nvim/colors ~/.config/nvim/colors
-ln -s $PWD/spacemacs/spacemacs.symlink ~/.spacemacs
+# ln -s $PWD/spacemacs/spacemacs.symlink ~/.spacemacs
+ln -s $PWD/spacemacs/init.el.symlink ~/.spacemacs.d/init.el
 
 ln -s $PWD/rails/.gemrc ~/
 ln -s $PWD/rails/.pryrc ~/
@@ -78,15 +80,16 @@ pip install -r pip-requirements.txt
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # Node Install
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash
-nvm install 6.1.0
-nvm use 6.1.0
+nvm install 6.9.1
+nvm use 6.9.1
 npm install -g npm
-# automatic version switcher
-npm install -g avn avn-nvm avn-n
 # spacemacs javascript layer
 nvm alias default node
-npm install -g tern js-beautify jshint
+npm install -g tern js-beautify
 npm install -g eslint babel-eslint eslint-plugin-react
-npm install -g tslint typescript
+npm install -g eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx-a11y
+# Install offical react project generator
+npm install -g create-react-app
 
+# automatic version switcher
+npm install -g avn avn-nvm avn-n
