@@ -1,8 +1,11 @@
 {
-  "extends": "airbnb",
-  "rules": {
-    // disable requiring trailing commas because it might be nice to revert to
-    // being JSON at some point, and I don't want to make big changes now.
-    "comma-dangle": 0
-  }
+    "extends": "airbnb", "rules": {
+        "indent": ["error", 4],
+        "brace-style": ["error", "stroustrup"]
+    },
+    "env": {
+        "browser": true,
+        "es6": true,
+        "jquery": true
+    }
 }
