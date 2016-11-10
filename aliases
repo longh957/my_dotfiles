@@ -82,3 +82,7 @@ alias vom='vim'
 #
 # Playboy
 alias pcm='PlayboyContentfulModels::'
+
+# Emacs
+alias e="emacsclient -t -a ''"
+alias ec="emacsclient -c -n -a ''"
