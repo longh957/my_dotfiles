@@ -2,7 +2,7 @@
 export VISUAL=vim
 export EDITOR=$VISUAL
 # Change to my dev path
-export DEV_DIR=$HOME/projects
+export DEV_DIR=$HOME/dev
 export POSTGRES_APP=/Applications/Postgres.app/Contents/Versions/9.4/bin
 export GOPATH=$DEV_DIR/go
 export PATH="$GOPATH/bin:$PATH"
