@@ -355,7 +355,11 @@ before packages are loaded. If you are unsure, you should try in setting them in
 
   ;; Enable full screen magit
   (setq-default git-magit-status-fullscreen t)
+  ;; Disable line wrapping
+  (setq-default truncate-lines t)
   )
+
+
 
 (defun dotspacemacs/user-config ()
   "Configuration function for user code.
