@@ -90,7 +90,6 @@ values."
 
      ;; Programming Tools
      auto-completion
-     gtags
      (syntax-checking :variables
                       syntax-checking-use-original-bitmaps t)
 
