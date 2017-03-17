@@ -18,3 +18,5 @@ Thumbs.db
 tags
 gems.tags
 .idea
+
+npm-debug.log.*

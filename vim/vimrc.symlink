@@ -21,7 +21,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'sjl/gundo.vim'
 Plug 'rking/ag.vim'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'scrooloose/syntastic'
+" Plug 'scrooloose/syntastic'
 " Git Plugins
 Plug 'tpope/vim-fugitive'
 Plug 'gregsexton/gitv'
@@ -56,6 +56,9 @@ Plug 'unblevable/quick-scope'
 Plug 'ervandew/supertab'
 Plug 'tomtom/tcomment_vim'
 Plug 'wincent/terminus'
+Plug 'mhinz/vim-grepper'
+" Async Linter
+Plug 'w0rp/ale'
 " Angular 2
 Plug 'magarcia/vim-angular2-snippets'
 Plug 'leafgarland/typescript-vim'
@@ -75,6 +78,10 @@ if has("gui_running") && exists("$COMSPEC")
 endif
 "256 Color temrinal support
 set t_Co=256
+
+" " Ale async linter
+let &runtimepath.=',~/.vim/bundle/ale'
+silent! helptags ALL
 
 filetype plugin indent on "Filetype highlighting
 set title "Show filename in titlebar
@@ -128,6 +135,7 @@ set softtabstop=2 "Make backspace go back 4 spaces
 "If you want the tab settings to be based on a per file-type basis use the the following:
 "autocmd FileType * set tabstop=2|set shiftwidth=2|set noexpandtab
 autocmd FileType python set tabstop=4|set shiftwidth=4|set expandtab
+autocmd FileType javascript set tabstop=4|set shiftwidth=4|set expandtab
 
 set colorcolumn=80 "Mark colum 80
 
@@ -226,7 +234,7 @@ EOF
 """"""""""""""""""""""
 " Plugins Configurations
 """"""""""""""""""""""
-source ~/.vim/plugins/syntastic.vim
+" source ~/.vim/plugins/syntastic.vim
 source ~/.vim/plugins/airline.vim
 source ~/.vim/plugins/nerdtree.vim
 

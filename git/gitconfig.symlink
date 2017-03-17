@@ -1,5 +1,5 @@
 [core]
-	excludesfile =
+	excludesfile = /Users/lhuynh/.gitignore_global
 [alias]
   aa = add --all
   ap = add --patch
