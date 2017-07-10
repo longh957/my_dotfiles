@@ -22,6 +22,10 @@ Change Hostname:
     npm install -g eslint-plugin-react &&\
     npm install -g eslint-config-airbnb
 
+### Tiny Care Terminal
+    npm install -g tiny-care-terminal
+    npm install -g git-standup
+
 ### Postgres.app
 [Postgres.App Homepage](http://postgresapp.com/)
 

@@ -83,6 +83,9 @@ alias vom='vim'
 # Playboy
 alias pcm='PlayboyContentfulModels::'
 
+#Tiny Care Terminal
+alias tct='tiny-care-terminal'
+
 # Emacs
 alias e="emacsclient -t -a ''"
 alias ec="emacsclient -c -n -a ''"
