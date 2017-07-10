@@ -9,7 +9,7 @@ mkdir -p ~/.vim/autoload
 mkdir -p ~/.vim/colors
 mkdir -p ~/.config/nvim/autoload
 mkdir -p ~/.tmux/plugins
-mkdir -p ~/dev/.virtualenv
+mkdir -p ~/Dev/.virtualenv
 mkdir -p ~/.spacemacs.d
 
 # Download Smyck theme
