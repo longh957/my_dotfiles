@@ -92,4 +92,8 @@ npm info "$PKG@latest" peerDependencies --json | command sed 's/[\{\},]//g ; s/:
 # Install offical react project generator
 npm install -g create-react-app
 
+# Tiny Care Terminal
+npm install -g tiny-care-terminal
+npm install -g git-standup
+
 # npm install -g avn avn-nvm avn-n
