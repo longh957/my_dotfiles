@@ -21,7 +21,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'sjl/gundo.vim'
 Plug 'rking/ag.vim'
 Plug 'editorconfig/editorconfig-vim'
-" Plug 'scrooloose/syntastic'
+Plug 'scrooloose/syntastic'
 " Git Plugins
 Plug 'tpope/vim-fugitive'
 Plug 'gregsexton/gitv'
@@ -39,6 +39,7 @@ Plug 'mustache/vim-mustache-handlebars'
 Plug 'tpope/vim-rails'
 Plug 'vim-ruby/vim-ruby'
 Plug 'slim-template/vim-slim'
+" Plug 'slm-lang/vim-slm'
 Plug 'tpope/vim-bundler'
 " Elixir Plugins
 Plug 'elixir-lang/vim-elixir'
@@ -58,10 +59,17 @@ Plug 'tomtom/tcomment_vim'
 Plug 'wincent/terminus'
 Plug 'mhinz/vim-grepper'
 " Async Linter
-Plug 'w0rp/ale'
+" Plug 'w0rp/ale'
 " Angular 2
 Plug 'magarcia/vim-angular2-snippets'
 Plug 'leafgarland/typescript-vim'
+" Vue JS
+Plug 'posva/vim-vue'
+Plug 'digitaltoad/vim-pug'
+" Shell Commands
+Plug 'benmills/vimux'
+" AutoClose Parens, Hashes brackets
+Plug 'Townk/vim-autoclose'
 
 call plug#end()
 """""""""""""""
@@ -80,8 +88,8 @@ endif
 set t_Co=256
 
 " " Ale async linter
-let &runtimepath.=',~/.vim/bundle/ale'
-silent! helptags ALL
+" let &runtimepath.=',~/.vim/bundle/ale'
+" silent! helptags ALL
 
 filetype plugin indent on "Filetype highlighting
 set title "Show filename in titlebar
@@ -143,6 +151,13 @@ set colorcolumn=80 "Mark colum 80
 autocmd BufRead,BufNewFile *.es6 setfiletype javascript
 let g:jsx_ext_required = 1 " Allow JSX in normal JS files
 
+" Slim
+autocmd BufNewFile,BufRead *.slim setlocal filetype=slim
+autocmd BufNewFile,BufRead *.slm setlocal filetype=slim
+
+" Vue
+" autocmd FileType vue syntax sync fromstart
+autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.slim.slm.javascript.scss
 "List of files to ignore
 source ~/.vim/ignore.vim
 
@@ -174,6 +189,10 @@ map <F5> :TComment<CR>
 vmap <Enter> <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+
+" Maps shell prompt to leader vp
+" Prompt for a command to run
+map <Leader>vp :VimuxPromptCommand<CR>
 
 "Allow using . to repeat entire maps
 silent! call repeat#set("\<Plug>MyWonderfulMap", v:count)
@@ -234,7 +253,7 @@ EOF
 """"""""""""""""""""""
 " Plugins Configurations
 """"""""""""""""""""""
-" source ~/.vim/plugins/syntastic.vim
+source ~/.vim/plugins/syntastic.vim
 source ~/.vim/plugins/airline.vim
 source ~/.vim/plugins/nerdtree.vim
 
