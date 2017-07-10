@@ -163,7 +163,7 @@ autocmd BufNewFile,BufRead *.slm setlocal filetype=slim
 " Vue
 " autocmd FileType vue syntax sync fromstart
 autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.slim.slm.javascript.scss
->>>>>>> e3f919c469e83ed57cc2a1be3cc3d9f9fd8e3db8
+
 "List of files to ignore
 source ~/.vim/ignore.vim
 
