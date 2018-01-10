@@ -31,7 +31,7 @@ _pry_.run_command Pry.history.to_a.last
 end
 
 
-require 'pry-bloodline'
+# require 'pry-bloodline'
 #
 # PryBloodline.configure do |c|
 #   c.line_color = :red
@@ -39,7 +39,7 @@ require 'pry-bloodline'
 #   c.path_color = :blue
 #   c.separator_color = :light_black
 # end
-PryBloodline.setup!
+# PryBloodline.setup!
 
 # Set the current theme
 # needs the pry-theme gem

@@ -89,3 +89,6 @@ alias tct='tiny-care-terminal'
 # Emacs
 alias e="emacsclient -t -a ''"
 alias ec="emacsclient -c -n -a ''"
+
+#MAc
+alias finder="open -a 'forklift'"

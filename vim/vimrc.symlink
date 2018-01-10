@@ -32,6 +32,7 @@ Plug 'tpope/vim-surround'
 Plug 'wesQ3/vim-windowswap'
 " Javascript
 Plug 'jelera/vim-javascript-syntax'
+" Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'elzr/vim-json'
 " Rails
@@ -39,7 +40,7 @@ Plug 'mustache/vim-mustache-handlebars'
 Plug 'tpope/vim-rails'
 Plug 'vim-ruby/vim-ruby'
 Plug 'slim-template/vim-slim'
-" Plug 'slm-lang/vim-slm'
+Plug 'slm-lang/vim-slm'
 Plug 'tpope/vim-bundler'
 " Elixir Plugins
 Plug 'elixir-lang/vim-elixir'
@@ -65,8 +66,8 @@ Plug 'magarcia/vim-angular2-snippets'
 Plug 'leafgarland/typescript-vim'
 " Vue
 Plug 'posva/vim-vue'
+" Plug 'cakebaker/scss-syntax.vim'
 " Vue JS
-Plug 'posva/vim-vue'
 Plug 'digitaltoad/vim-pug'
 " Shell Commands
 Plug 'benmills/vimux'
@@ -92,7 +93,7 @@ set t_Co=256
 " " Ale async linter
 " let &runtimepath.=',~/.vim/bundle/ale'
 " silent! helptags ALL
-
+syntax enable
 filetype plugin indent on "Filetype highlighting
 set title "Show filename in titlebar
 set showmatch  " Show matching brackets.
@@ -154,7 +155,7 @@ autocmd BufRead,BufNewFile *.es6 setfiletype javascript
 let g:jsx_ext_required = 1 " Allow JSX in normal JS files
 
 " Vue Syntax Highlighting
-autocmd FileType vue syntax sync fromstart
+" autocmd FileType vue syntax sync fromstart
 
 " Slim
 autocmd BufNewFile,BufRead *.slim setlocal filetype=slim
@@ -162,7 +163,8 @@ autocmd BufNewFile,BufRead *.slm setlocal filetype=slim
 
 " Vue
 " autocmd FileType vue syntax sync fromstart
-autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.slim.slm.javascript.scss
+autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.slim.scss.javascript
+au BufNewFile,BufRead *.vue set filetype=vue
 
 "List of files to ignore
 source ~/.vim/ignore.vim
