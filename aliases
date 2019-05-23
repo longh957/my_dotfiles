@@ -102,3 +102,5 @@ alias firefox="/Applications/Firefox\ Developer\ Edition.app/Contents/MacOS/fire
 
 #Chrome
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
+#Mac
+alias finder="open -a 'forklift'"
