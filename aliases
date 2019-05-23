@@ -23,6 +23,9 @@ alias rs="rails s"
 alias migrate="rake db:migrate db:rollback && rake db:migrate"
 alias s="rspec"
 
+#Curl
+alias purge="curl -X PURGE"
+
 # Pretty print the PATH env
 alias path='echo $PATH | tr -s ":" "\n"'
 
@@ -89,3 +92,13 @@ alias tct='tiny-care-terminal'
 # Emacs
 alias e="emacsclient -t -a ''"
 alias ec="emacsclient -c -n -a ''"
+
+# Emulator
+alias emulator="/Users/lhuynh/Library/Android/sdk/emulator/emulator @Pixel_2_API_26"
+alias ios-chrome-emulator="/Users/lhuynh/Dev/dev_tools/chromium/src/out/Release-iphonesimulator/iossim /Users/lhuynh/Dev/dev_tools/chromium/src/out/Release-iphonesimulator/Chromium.app"
+
+#Firefox
+alias firefox="/Applications/Firefox\ Developer\ Edition.app/Contents/MacOS/firefox -start-debugger-server -no-remote"
+
+#Chrome
+alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
