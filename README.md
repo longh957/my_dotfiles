@@ -117,7 +117,7 @@ git config --global github.oauth-token <token>
 
 ```bash
 export DOTFILE_DIR=~/dev/dotfiles
-git clone https://github.com/natsumi/dotfiles $DOTFILE_DIR
+git clone https://github.com/longh957/my_dotfiles $DOTFILE_DIR
 ```
 
 ## ZSH Setup<a id="sec-2-6"></a>
