@@ -1,0 +1,106 @@
+# Unix
+alias ll="ls -alh"
+alias ln="ln -v"
+alias mkdir="mkdir -p"
+alias e="$EDITOR"
+alias v="$VISUAL"
+
+# Tmux
+alias tma='tmux attach'
+alias tmn='tmux new'
+alias tml='tmux list-sessions'
+
+# Bundler
+alias b="bundle"
+
+# Rails
+alias frrc="foreman run rails console"
+alias frrs="foreman run rails s -b 0.0.0.0"
+alias frrr="foreman run rails runner"
+alias frbe="foreman run bundle exec"
+alias rc="rails c"
+alias rs="rails s"
+alias migrate="rake db:migrate db:rollback && rake db:migrate"
+alias s="rspec"
+
+#Curl
+alias purge="curl -X PURGE"
+
+# Pretty print the PATH env
+alias path='echo $PATH | tr -s ":" "\n"'
+
+# Include custom aliases
+[[ -f ~/.aliases.local ]] && source ~/.aliases.local
+
+# Universal Shell Aliases, should work with both Bash and ZSH.
+alias mkdir='mkdir -p'
+alias chown='chown -Rv'
+alias chmod='chmod -Rv'
+alias grep='grep --color=always'
+alias diff='colordiff'
+alias tar='tar --verbose'
+alias tmux='tmux -2'
+#alias rsync='rsync --verbose  --progress --stats --compress --recursive --times --perms --links exclude "*bak" --exclude "*~*"'
+alias psaux='ps aux'
+alias psl='psaux|more'
+alias psg='psaux|grep'
+alias df='pydf -a -h -B'
+alias more='less'
+alias tracert='mtr'
+alias traceroute='mtr'
+alias logout='sudo pkill -u $USER'
+alias log-out='sudo pkill -u $USER'
+
+#RubyMine
+alias mine='open -a rubymine .'
+
+# http://www.gnu.org/software/emacs/manual/html_node/emacs/Emacs-Server.html#Emacs-Server
+# alias emacsnw='emacs -nw'
+# alias emacsn='emacs -nw'
+# alias emacsd='emacs -daemon'
+# alias emacsc='emacsclient'
+
+# alias yi='yi --as=vim'
+
+# alias lla='ls -alF --group-directories-first --color=always'
+# alias ll='ls -l --group-directories-first --color=always'
+# alias la='ls -A --group-directories-first --color=always'
+# alias l='ls -CF --group-directories-first --color=always'
+# alias llg='ls -alF --group-directories-first --color=always|grep'
+# alias llm='ls -alF --group-directories-first --color=always|more'
+# alias lll='ls -alF --group-directories-first --color=always|more'
+alias vm='vim'
+alias vom='vim'
+
+# alias gtree='git log --graph --oneline --decorate --date=relative --all'
+#alias gcn='git clone'
+# alias ga='git add .'
+#alias gaa='git add -A'
+#alias gcm='git commit -m'
+#alias gcmu="git commit -m 'update'"
+#alias gcau="git commit -am 'update'"
+# alias gst='git status'
+# alias gco='git checkout'
+# alias gcob='git checkout -b'
+
+#Tiny Care Terminal
+alias tct='tiny-care-terminal'
+
+# Emacs
+alias e="emacsclient -t -a ''"
+alias ec="emacsclient -c -n -a ''"
+
+# Emulator
+alias emulator="/Users/lhuynh/Library/Android/sdk/emulator/emulator @Pixel_2_API_26"
+alias ios-chrome-emulator="/Users/lhuynh/Dev/dev_tools/chromium/src/out/Release-iphonesimulator/iossim /Users/lhuynh/Dev/dev_tools/chromium/src/out/Release-iphonesimulator/Chromium.app"
+
+#Firefox
+alias firefox="/Applications/Firefox\ Developer\ Edition.app/Contents/MacOS/firefox -start-debugger-server -no-remote"
+
+#Chrome
+alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
+#Mac
+alias finder="open -a 'forklift'"
+
+#Dev
+alias notes="vim ~/Dev/notes.txt"

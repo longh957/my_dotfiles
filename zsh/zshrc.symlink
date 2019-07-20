@@ -69,13 +69,13 @@ bindkey -s "^T" "^[Isudo ^[A" # "t" for "toughguy"
 # tic $TERM.ti
 
 # Configure online help
-unalias run-help
-autoload run-help
+#unalias run-help
+#autoload run-help
 HELPDIR=/usr/local/share/zsh/help
 
 # Remove aliases
-unalias gls #git log conflicts with dircolors gls
-unalias lt #git log conflicts with dircolors gls
+#unalias gls #git log conflicts with dircolors gls
+#unalias lt #git log conflicts with dircolors gls
 
 export DISABLE_SPRING=1
 
@@ -87,10 +87,13 @@ export DISABLE_SPRING=1
 # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
-# export NVM_DIR="/Users/lhuynh/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-# export PATH="/usr/local/sbin:$PATH"
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
 export PATH="/usr/local/sbin:$PATH"
+
+# SPARK SETUP
+export SPARK_LOCAL_IP=127.0.0.1
 
 # Tiny CARE TERMINAL
 
