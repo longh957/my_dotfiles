@@ -45,6 +45,7 @@
   - [Silver Searcher](#sec-2-17)
   - [Youtube-dl](#sec-2-18)
   - [Livestream](#sec-2-19)
+  - [VSCode](#sec-2-20)
 
 # OS X Options<a id="sec-1"></a>
 
@@ -116,7 +117,7 @@ git config --global github.oauth-token <token>
 ## Dotfile Setup<a id="sec-2-5"></a>
 
 ```bash
-export DOTFILE_DIR=~/dev/dotfiles
+export DOTFILE_DIR=~/Dev/dotfiles
 git clone https://github.com/longh957/my_dotfiles $DOTFILE_DIR
 ```
 
@@ -140,7 +141,7 @@ git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$H
 ### Setup Symlinks<a id="sec-2-6-3"></a>
 
 ```bash
-export DOTFILE_DIR=~/dev/dotfiles
+export DOTFILE_DIR=~/Dev/dotfiles
 ln -s $DOTFILE_DIR/zsh/zshrc.symlink ~/.zshrc
 ln -s $DOTFILE_DIR/zsh/zshenv.symlink ~/.zshenv
 ln -s $DOTFILE_DIR/zsh/zpreztorc.symlink ~/.zpreztorc
@@ -187,6 +188,19 @@ gem install ruby-lint rubocop scss_lint haml_lint
 
 [Powerline Fonts Repo](https://github.com/powerline/fonts)
 
+```shell
+git clone git clone https://github.com/powerline/fonts.git --depth=1 $DOTFILE_DIR/powerline
+./install.sh
+```
+
+### Update iterm Settings
+update font to powerline font
+
+allow access to clipboard
+
+Import symck theme from DOTFILE_DIR/themes
+
+
 ## Brew Bundle<a id="sec-2-9"></a>
 
 ```shell
@@ -223,9 +237,12 @@ sudo make install
 ### Node Version Manager<a id="sec-2-12-1"></a>
 
 ```shell
+brew install nvm
+mkdir ~/.nvm
+source ~/.zshrc
 nvm ls-remote # lists available versions to install
-nvm install v6.9.1
-nvm use v6.9.1
+nvm install v10.16.0
+nvm use v10.16.0
 npm install -g npm
 nvm alias default node
 ```
@@ -265,6 +282,7 @@ brew install yarn
 ### Prerequiste<a id="sec-2-13-1"></a>
 
 ```shell
+mkdir -p ~/.vim/colors
 mkdir -p ~/.vim/autoload
 ```
 
@@ -276,6 +294,7 @@ ln -s $DOTFILE_DIR/vim/functions ~/.vim/functions
 ln -s $DOTFILE_DIR/vim/plugins ~/.vim/plugins
 ln -s $DOTFILE_DIR/vim/vimrc.symlink ~/.vimrc
 ln -s $DOTFILE_DIR/vim/ignore.vim.symlink ~/.vim/ignore.vim
+ln -s $DOTFILE_DIR/vim/colors ~/.vim/
 ln -s $DOTFILE_DIR/ctags.symlink ~/.ctags
 ```
 
@@ -337,3 +356,13 @@ livestreamer --twitch-oauth-authenticate
 ```
 
 Copy the access<sub>token</sub> in URL to ~/.livestreamerrc
+
+
+## VSCode<a id="sec-2-20"></a>
+Install VS Code
+
+Install VS Code Settings Sync https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync
+
+Log in to Github through settings sync
+
+ALT + SHIFT + D to download settings
