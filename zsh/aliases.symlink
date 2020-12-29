@@ -104,3 +104,4 @@ alias finder="open -a 'forklift'"
 
 #Dev
 alias notes="vim ~/Dev/notes.txt"
+alias reload="source ~/.zshrc"

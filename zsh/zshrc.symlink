@@ -75,7 +75,7 @@ HELPDIR=/usr/local/share/zsh/help
 
 # Remove aliases
 #unalias gls #git log conflicts with dircolors gls
-#unalias lt #git log conflicts with dircolors gls
+# unalias lt #git log conflicts with dircolors gls
 
 export DISABLE_SPRING=1
 
@@ -90,6 +90,20 @@ export DISABLE_SPRING=1
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
+
+# auto load nvmrc
+autoload -U add-zsh-hook
+load-nvmrc() {
+  if [[ -f .nvmrc && -r .nvmrc ]]; then
+    nvm use
+  elif [[ $(nvm version) != $(nvm version default)  ]]; then
+    echo "Reverting to nvm default version"
+    nvm use default
+  fi
+}
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc
+
 export PATH="/usr/local/sbin:$PATH"
 
 # SPARK SETUP
@@ -99,16 +113,16 @@ export SPARK_LOCAL_IP=127.0.0.1
 
 # List of accounts to read the last tweet from, comma separated
 # The first in the list is read by the party parrot.
-export TTC_BOTS='neiltyson,cnn,factretriever'
+export TTC_BOTS='cnn,business,WSJ'
 
 # List of folders to look into for `git` commits, comma separated.
 # export TTC_REPOS='~/Work/Code,~/Fun/Code'
-export TTC_REPOS='~/Playboy/playboy_com,~/Playboy/pokedex'
+export TTC_REPOS='/Users/lhuynh/Dev'
 
 # Location/zip code to check the weather for. Both 90210 and "San Francisco, CA"
 # _should_ be ok (the zip code doesn't always work -- use a location
 # first, if you can). It's using weather.service.msn.com behind the curtains.
-export TTC_WEATHER='Los Angeles, CA'
+export TTC_WEATHER='Hacienda Heights, CA'
 
 # Set to false if you're an imperial savage. <3
 export TTC_CELSIUS=false
@@ -134,3 +148,19 @@ export CONSUMER_KEY='EnFB85Duz5qVcECae0OwvU0D'
 export CONSUMER_SECRET='tY1kOYA2trdmSTvfFWWKayMoq6Zq0ETwyuECfQZnkj74LRIMLC'
 export ACCESS_TOKEN='22586140-XZPjBhYE7L4lCSP1eTWpRiHP5PbntedCS5Ay0n5BC'
 export ACCESS_TOKEN_SECRET='Eg5FpXsq7Grizr80pccuFbeXnxE7CoCYNzWQxaRh2lyWS'
+
+# $TMUX_PLUGIN_MANAGER_PATHtmux-slack-counter/xoxp-2338067028-296207152451-1105859403476-f34abe34bd07c2d718204b7a284d8073
+#AWS CLI
+export PATH=~/.local/bin:$PATH
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+#PyEnv
+eval "$(pyenv init -)"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+
+export PATH="~/.pyenv/versions/3.5.8/bin:${PATH}"
