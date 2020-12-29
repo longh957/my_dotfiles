@@ -3,28 +3,29 @@ export VISUAL=vim
 export EDITOR=$VISUAL
 # Change to my dev path
 export DEV_DIR=$HOME/Dev
-export POSTGRES_APP=/Applications/Postgres.app/Contents/Versions/9.4/bin
-export GOPATH=$DEV_DIR/go
-export PATH="$GOPATH/bin:$PATH"
-export PATH="$POSTGRES_APP:$PATH"
+export DOTFILE_DIR=$DEV_DIR/dotfiles
+#export POSTGRES_APP=/Applications/Postgres.app/Contents/Versions/9.4/bin
+#export GOPATH=$DEV_DIR/go
+#export PATH="$GOPATH/bin:$PATH"
+#export PATH="$POSTGRES_APP:$PATH"
 export PATH="$PATH:/usr/local/opt/go/libexec/bin"
-export PATH="$PATH:/usr/local/Cellar/node/7.9.0/bin"
-export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+#export PATH="$PATH:/usr/local/Cellar/node/7.9.0/bin"
+#export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 # if rbenv is present, configure it for use
-if which rbenv &> /dev/null; then
+#if which rbenv &> /dev/null; then
     # enable shims and auto-completion
-    eval "$(rbenv init -)"
-fi
+#    eval "$(rbenv init -)"
+#fi
 
 # if Virtualenv is install
-if which virtualenvwrapper.sh &> /dev/null; then
-  export VIRTUALENVWRAPPER_LOG_DIR=$DEV_DIR/.virtualenv
-  export VIRTUALENVWRAPPER_HOOK_DIR=$DEV_DIR/.virtualenv
-  export WORKON_HOME=$DEV_DIR
-  source /usr/local/bin/virtualenvwrapper.sh
-fi
+#if which virtualenvwrapper.sh &> /dev/null; then
+#  export VIRTUALENVWRAPPER_LOG_DIR=$DEV_DIR/.virtualenv
+#  export VIRTUALENVWRAPPER_HOOK_DIR=$DEV_DIR/.virtualenv
+#  export WORKON_HOME=$DEV_DIR
+#  source /usr/local/bin/virtualenvwrapper.sh
+#fi
 
-export PATH="/usr/local/heroku/bin:/usr/local/bin:$HOME/.rbenv/bin:$PATH"
+#export PATH="/usr/local/heroku/bin:/usr/local/bin:$HOME/.rbenv/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
