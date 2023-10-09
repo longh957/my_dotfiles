@@ -207,6 +207,10 @@ silent! call repeat#set("\<Plug>MyWonderfulMap", v:count)
 
 " Index ctags from any project, including those outside Rails
 map <Leader>ct :!ctags -R .<CR>
+
+"Nerdtree
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <leader>t :NERDTreeToggle<CR>
 """""""""""""""""""
 "Misc Options
 """""""""""""""""""
