@@ -9,7 +9,6 @@
   - [Git](#sec-2-3)
   - [Github](#sec-2-4)
     - [Generate ssh key](#sec-2-4-1)
-    - [Spacemacs Github Integration](#sec-2-4-2)
   - [Dotfile Setup](#sec-2-5)
   - [ZSH Setup](#sec-2-6)
     - [Set Default Shell](#sec-2-6-1)
@@ -22,7 +21,9 @@
     - [Symlink](#sec-2-7-2)
     - [Linters](#sec-2-7-3)
     - [Restart your terminal here](#sec-2-7-4)
-  - [Poewrline Fonts](#sec-2-8)
+  - [Fonts](#sec-2-8)
+    - [Powerline Fonts](#sec-2-8-1)
+    - [NerdFonts](#sec-2-8-2)
   - [Brew Bundle](#sec-2-9)
   - [Python](#sec-2-10)
   - [Elixir](#sec-2-11)
@@ -46,6 +47,7 @@
   - [Youtube-dl](#sec-2-18)
   - [Livestream](#sec-2-19)
   - [VSCode](#sec-2-20)
+  - [LunarVim](#sec-2-21)
 
 # OS X Options<a id="sec-1"></a>
 
@@ -73,6 +75,7 @@ Set mouse to a faster track speed Uncheck "Scroll direction: Natural"
 ## Keyboard<a id="sec-1-4"></a>
 
 Set repeat speed fast Set repeat delay low
+Set Caps Lock as ESC
 
 # Software<a id="sec-2"></a>
 
@@ -93,6 +96,8 @@ brew install git
 git config --global user.name <user_name>
 git config --global user.email <email>
 git config --global push.default simple
+git config --global fetch.prune true
+git config --gloabl pull.rebase true
 ```
 
 ## Github<a id="sec-2-4"></a>
@@ -105,14 +110,6 @@ cat ~/.ssh/id_rsa.pub | pbcopy
 ```
 
 Paste into github's ssh setting
-
-### Spacemacs Github Integration<a id="sec-2-4-2"></a>
-
-Grant access to repo and gist [Set Access Tokens](https://github.com/settings/tokens)
-
-```bash
-git config --global github.oauth-token <token>
-```
 
 ## Dotfile Setup<a id="sec-2-5"></a>
 
@@ -184,12 +181,23 @@ gem install ruby-lint rubocop scss_lint haml_lint
 
 ### Restart your terminal here<a id="sec-2-7-4"></a>
 
-## Poewrline Fonts<a id="sec-2-8"></a>
+## Fonts<a id="sec-2-8"></a>
+## Powerline Fonts<a id="sec-2-8-1"></a>
 
 [Powerline Fonts Repo](https://github.com/powerline/fonts)
 
 ```shell
 git clone git clone https://github.com/powerline/fonts.git --depth=1 $DOTFILE_DIR/powerline
+./install.sh
+```
+## NerdFonts<a id="sec-2-8-2"></a>
+[NerdFonts](https://www.nerdfonts.com/)
+
+[NerdFont Repo](https://github.com/ronniedroid/getnf)
+
+```shell
+git clone https://github.com/ronniedroid/getnf.git
+cd getnf
 ./install.sh
 ```
 
@@ -199,7 +207,7 @@ update font to powerline font
 allow access to clipboard
 
 Import symck theme from DOTFILE_DIR/themes
-
+[Install nord theme](https://github.com/nordtheme/iterm2/releases/tag/v0.2.0)
 
 ## Brew Bundle<a id="sec-2-9"></a>
 
@@ -366,3 +374,6 @@ Install VS Code Settings Sync https://marketplace.visualstudio.com/items?itemNam
 Log in to Github through settings sync
 
 ALT + SHIFT + D to download settings
+
+## LunarVim<a id="sec-2-21"></a>
+[Install Lunarvim](https://www.lunarvim.org/docs/installation)

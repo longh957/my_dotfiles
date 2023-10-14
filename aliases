@@ -54,6 +54,9 @@ alias log-out='sudo pkill -u $USER'
 #RubyMine
 alias mine='open -a rubymine .'
 
+#Python
+alias python=python3
+
 # http://www.gnu.org/software/emacs/manual/html_node/emacs/Emacs-Server.html#Emacs-Server
 # alias emacsnw='emacs -nw'
 # alias emacsn='emacs -nw'

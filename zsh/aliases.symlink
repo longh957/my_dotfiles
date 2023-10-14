@@ -105,3 +105,7 @@ alias finder="open -a 'forklift'"
 #Dev
 alias notes="vim ~/Dev/notes.txt"
 alias reload="source ~/.zshrc"
+
+#Python
+alias python="python3"
+alias pip="pip3"

@@ -73,6 +73,8 @@ Plug 'digitaltoad/vim-pug'
 Plug 'benmills/vimux'
 " AutoClose Parens, Hashes brackets
 Plug 'Townk/vim-autoclose'
+" Themes
+Plug 'nordtheme/vim'
 
 call plug#end()
 """""""""""""""
@@ -80,7 +82,7 @@ call plug#end()
 """""""""""""""
 syntax on "Syntax highlighting
 set background=dark
-colorscheme smyck "Colorscheme to pick
+colorscheme nord "Colorscheme to pick
 
 set gfn=Menlo\ for\ Powerline:h14 "Font settings for OSX
 "Set font for Windows

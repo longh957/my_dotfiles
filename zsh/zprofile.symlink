@@ -60,3 +60,10 @@ if [[ ! -d "$TMPDIR" ]]; then
 fi
 
 TMPPREFIX="${TMPDIR%/}/zsh"
+
+#
+# Brew
+#
+eval "$(/opt/homebrew/bin/brew shellenv)
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
