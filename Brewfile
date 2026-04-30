@@ -6,6 +6,8 @@ brew "mas"
 cask 'visual-studio-code'
 cask 'alfred'
 cask 'spotify'
+cask 'pycharm'
+cask 'intellij-idea'
 brew 'autoconf'
 brew 'xz'
 brew 'automake'

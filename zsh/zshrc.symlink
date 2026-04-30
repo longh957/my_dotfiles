@@ -129,6 +129,10 @@ load-nvmrc
 
 
 #### PATHS
+#export PATH
+export PATH="/opt/homebrew/bin:$PATH"
 path+=(~/.local/bin)
 path+=(~/.cargo/bin)
-export PATH
+
+# Added by Antigravity
+export PATH="/Users/lhuynh/.antigravity/antigravity/bin:$PATH"
